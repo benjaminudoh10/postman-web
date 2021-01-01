@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import TopBar from "./components/TopBar";
 
 const Main = styled.div`
   font-size: 16px;
@@ -8,16 +9,19 @@ const Main = styled.div`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2b2a29;
+  background-color: var(--background-color-primary);
   height: 100vh;
-  max-height: 100vh;
   width: 100vw;
-  max-width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  padding: 8px;
 `;
 
 function App() {
   return (
-    <Main></Main>
+    <Main>
+      <TopBar></TopBar>
+    </Main>
   );
 }
 
