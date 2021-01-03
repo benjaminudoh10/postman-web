@@ -8,14 +8,17 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px;
 `;
 
 function TopBar() {
-  return <Container>
+  return (
+    <Container>
       <LeftItems></LeftItems>
       <MiddleItems></MiddleItems>
       <RightItems></RightItems>
-  </Container>;
+    </Container>
+  );
 }
 
 export default TopBar;

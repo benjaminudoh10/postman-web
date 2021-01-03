@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import TopBar from "./components/TopBar";
+import MainSection from "./components/MainSection";
 
 const Main = styled.div`
   font-size: 16px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,13 +15,13 @@ const Main = styled.div`
   width: 100vw;
   overflow: hidden;
   position: fixed;
-  padding: 8px;
 `;
 
 function App() {
   return (
     <Main>
-      <TopBar></TopBar>
+      <TopBar />
+      <MainSection />
     </Main>
   );
 }
