@@ -29,7 +29,7 @@ const Container = styled.div`
     color: white;
     margin-left: 10px;
     padding: 1px 10px;
-    size: 28;
+    width: 100%;
   }
 `;
 

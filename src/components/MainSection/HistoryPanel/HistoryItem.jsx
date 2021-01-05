@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUtensils,
+  faTrashAlt,
+  faPlus,
+  faEllipsisH,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   display: flex;
@@ -21,10 +26,21 @@ const Container = styled.div`
     svg {
       opacity: 1;
     }
+
+    .overlay {
+      display: block;
+    }
   }
 
   > * {
     margin-right: 10px;
+  }
+
+  .overlay {
+    display: none;
+    > * {
+      padding: 10px;
+    }
   }
 `;
 
@@ -53,6 +69,16 @@ const RequestUrl = styled.p`
   font-size: 12px;
 `;
 
+const ActionOverlay = styled.div`
+  background-color: var(--background-color-secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  right: 0;
+`;
+
 const HistoryItem = function ({ method }) {
   return (
     <Container>
@@ -67,6 +93,23 @@ const HistoryItem = function ({ method }) {
       <RequestUrl>
         http://www.google.com?q=ytfnhgvbdj&amp;asd=kjhvbnjhgfvbnkjhg&amp;size=240
       </RequestUrl>
+      <ActionOverlay className="overlay">
+        <FontAwesomeIcon
+          icon={faPlus}
+          fontSize={"xs"}
+          color={"var(--content-color-secondary)"}
+        />
+        <FontAwesomeIcon
+          icon={faTrashAlt}
+          fontSize={"xs"}
+          color={"var(--content-color-secondary)"}
+        />
+        <FontAwesomeIcon
+          icon={faEllipsisH}
+          fontSize={"xs"}
+          color={"var(--content-color-secondary)"}
+        />
+      </ActionOverlay>
     </Container>
   );
 };
