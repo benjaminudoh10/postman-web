@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 8px;
+  margin: 0 8px;
 
   input:focus {
     outline: none;

@@ -2,26 +2,29 @@ import styled from "styled-components";
 
 const Container = styled.a`
   background-color: ${(props) =>
-    props.primary ? "var(--brand-color)" : "transparent"};
-  padding: 8px 15px 12px;
+    props.backgroundColor ? props.backgroundColor : "transparent"};
+  padding: 8px 15px 8px;
   border-radius: ${(props) => (props.primary ? "100%" : "5px")};
   text-decoration: none;
-  color: white;
-//   font-size: 14px;
+  color: ${(props) => (props.color ? props.color : "white")};
   cursor: pointer;
 
   :hover {
     opacity: 0.5;
     background-color: ${(props) =>
-      props.primary
-        ? "var(--brand-color)"
+      props.hoverBackgroundColor
+        ? props.hoverBackgroundColor
         : "var(--background-color-secondary)"};
   }
 `;
 
-function IconButton({ icon, primary }) {
+function IconButton({ icon, backgroundColor, hoverBackgroundColor, color }) {
   return (
-    <Container primary={primary}>
+    <Container
+      backgroundColor={backgroundColor}
+      hoverBackgroundColor={hoverBackgroundColor}
+      color={color}
+    >
       <span>{icon}</span>
     </Container>
   );

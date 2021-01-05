@@ -21,7 +21,10 @@ const Container = styled.div`
 function MiddleItems() {
   return (
     <Container>
-      <Button text="My Workspace" icon={<FontAwesomeIcon icon={faPlus} />}></Button>
+      <Button
+        text="My Workspace"
+        icon={<FontAwesomeIcon icon={faPlus} />}
+      ></Button>
       <Button text="Invite" icon={<FontAwesomeIcon icon={faPlus} />}></Button>
     </Container>
   );

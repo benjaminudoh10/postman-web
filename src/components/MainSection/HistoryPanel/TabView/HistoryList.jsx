@@ -5,7 +5,6 @@ import HistoryItem from "../HistoryItem";
 const Container = styled.div`
   overflow: scroll;
   cursor: pointer;
-  border: 4px solid red;
   height: 80vh;
 `;
 

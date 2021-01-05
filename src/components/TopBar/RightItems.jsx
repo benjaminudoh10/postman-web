@@ -30,13 +30,21 @@ const Container = styled.div`
 function RightItems() {
   return (
     <Container>
-      <IconButton icon={<FontAwesomeIcon icon={faSync} />} primary />
+      <IconButton
+        icon={<FontAwesomeIcon icon={faSync} />}
+        backgroundColor="var(--brand-color)"
+        hoverBackgroundColor="var(--brand-color)"
+      />
       <IconButton icon={<FontAwesomeIcon icon={faCoffee} />} />
       <IconButton icon={<FontAwesomeIcon icon={faCog} />} />
       <IconButton icon={<FontAwesomeIcon icon={faBell} />} />
       <IconButton icon={<FontAwesomeIcon icon={faHeart} />} />
-      <IconButton icon={<FontAwesomeIcon icon={faUtensils} />} primary />
-      <Button primary text="Upgrade" />
+      <IconButton
+        icon={<FontAwesomeIcon icon={faUtensils} />}
+        backgroundColor="var(--brand-color)"
+        hoverBackgroundColor="var(--brand-color)"
+      />
+      <Button color="var(--brand-color)" text="Upgrade" />
     </Container>
   );
 }

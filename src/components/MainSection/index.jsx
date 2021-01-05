@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import HistoryPanel from "./HistoryPanel";
+import MainPanel from "./MainPanel";
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ function MainSection() {
   return (
     <Container>
       <HistoryPanel />
+      <MainPanel />
     </Container>
   );
 }

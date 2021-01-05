@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.a`
   background-color: ${(props) =>
-    props.primary ? "var(--brand-color)" : "var(--background-color-secondary)"};
+    props.color ? props.color : "var(--background-color-secondary)"};
   padding: 8px 15px;
   border-radius: 3px;
   color: white;
@@ -19,9 +19,9 @@ const Container = styled.a`
   }
 `;
 
-function Button({ text, icon, primary }) {
+function Button({ text, icon, color }) {
   return (
-    <Container primary={primary}>
+    <Container color={color}>
       {icon && <span>{icon}</span>}
       {text}
     </Container>

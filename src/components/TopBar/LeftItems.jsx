@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Button from "../Button";
+import IconButton from "../IconButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,10 +22,17 @@ const Container = styled.div`
 function LeftItems() {
   return (
     <Container>
-      <Button text="New" icon={<FontAwesomeIcon icon={faPlus} />} primary />
+      <Button
+        text="New"
+        icon={<FontAwesomeIcon icon={faPlus} />}
+        color="var(--brand-color)"
+      />
       <Button text="Import" />
       <Button text="Runner" />
-      <Button icon={<FontAwesomeIcon icon={faPlus} />} />
+      <IconButton
+        icon={<FontAwesomeIcon icon={faPlus} />}
+        backgroundColor="var(--background-color-secondary)"
+      />
     </Container>
   );
 }
